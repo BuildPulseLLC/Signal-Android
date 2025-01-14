@@ -16,7 +16,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - my-cache-1
+            - my-cache-2
 
       - run:
           name: Build with Gradle
@@ -38,6 +38,6 @@ workflows:
           post-steps: # steps to run after steps defined in the job bar
             - save_cache:
                 when: always
-                key: my-cache-1
+                key: my-cache-2
                 paths:
                   - .gradle/
